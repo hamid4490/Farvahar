@@ -1,0 +1,14 @@
+# Exported from Render on 2024-08-30T15:45:00Z
+services:
+- type: web
+  name: Farvahar
+  runtime: python
+  repo: https://github.com/hamid4490/Farvahar
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python farvahar.py
+  healthCheckPath: /health
+  previews:
+    generation: automatic
+version: "1"
